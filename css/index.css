@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200; 1.300;1.400;1.500;1.600;1.700;1.800;1.900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    ;
+}
+
+:root {
+    --cor-h1-esquerdo: #77ffc0;
+    --cor-direito: #0f8;
+    --cor-fundo: #201b2c;
+    --cor-input: #514869;
+    --cor-label: #f0ffffde;
+    --cor-btn-login: #00ff88;
+
+}
+
+.base {
+
+    display: flex;
+    width: 100vw;
+    height: 100vw;
+    background-color: var(--cor-fundo);
+    justify-content: center;
+    align-items: center;
+
+}
+
+.login-left {
+
+    width: 50vw;
+    height: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+.login-left>h1 {
+    color: var(--cor-h1-esquerdo);
+}
+.img-login-left{
+    width: 35tw;
+    font-size: 3vw;
+}
+
+.login-right {
+
+    width: 50vw;
+    height: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+
+
+
+.login-card {
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 30px 35px;
+    background-color: #2f2841;
+    border-radius: 20px;
+    box-sizing: 0px 10px 40px #00000056;
+}
+
+.login-card>h1 {
+    color: var(--cor-direito);
+    font-weight: 800;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+.textfield {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin: 10px 0px;
+}
+
+.textfield>input {
+    width: 100%;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    padding: 16px;
+    margin: 10px 0px;
+    background-color: var(--cor-input);
+    color: #f0ffffde;
+}
+
+.textfield>label {
+    color: var(--cor-label);
+    margin-bottom: 10px;
+}
+
+.textfield>input::placeholder {
+color: #f0ffff94;
+}
+
+.btn-login {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0px;
+    border: none;
+    outline: none;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 3px;
+    color: #2b134b;
+    background-color: var(--cor-btn-login);
+    cursor: pointer;
+    box-shadow: 0px 10px 40px -12px #00ff8052;
+}
+
+@media only screen and (max-width: 950px) {
+    .login-card{
+        width: 80%;
+    }
+}
+
+@media only screen and (max-width: 600px){
+
+.base{
+    height: auto;
+    display: flex;
+    flex-direction: column;
+}
+    
+   .login-right{
+        display: flex;
+        flex-direction: column;
+        height: auto;
+    }
+    .login-left > h1{
+        display: none;
+    }
+    .login-left{
+        width: 100%;
+        height: auto;
+    }
+
+    .login-right{
+        width: 100%;
+        height: auto;
+        margin: 10px 0px;
+    }
+}
